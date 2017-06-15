@@ -6,6 +6,7 @@ After=calico-node.service
 Wants=network.target calico-node.service
 {% else %}
 Wants=network.target
+Wants=rpc-statd.service
 {% endif %}
 
 [Service]
